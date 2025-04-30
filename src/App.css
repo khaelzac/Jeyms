@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+:root{
+  --bg-col: #355c7d;
+  --second-col: #f8b195;
+  --grad-color: -webkit-linear-gradient(var(--bg-col),var(--second-col));
+  --hov-col: #FF6B6B;
+  --text-color: #ffffff;
+  --p-color: #E0E0E0;
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Quicksand";
+}
+body, html{
+  background: linear-gradient(135deg, #0F2027, #2C5364);
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: "Quicksand";
+  color: var(--text-color);
+}
+.type-writer{
+  font-family: "Quicksand";
+  color: var(--text-color);
+}
+.content{
+  display: flex;
+  justify-content: center;
+}
+.content-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  gap: 1.5rem;
+}
+.content-container h1{
+  font-family: "Quicksand";
+  color: var(--text-color);
+  align-self: flex-start;
+}
+.banner-content h1{
+  color: var(--text-color);
+}
+p{
+  color: var(--p-color);
+  font-size: 1.5rem;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+.navbar .navbar-toggler {
+  border-color: white !important;
+}
+
+.nav-link-custom {
+  color: var(--text-color) !important;
+  font-size: 1.5rem !important;
+  font-weight: bold;
+}
+.nav-link-w {
+  color: white !important;
+  font-size: 1.5rem !important;
+  font-weight: bold;
+}
+.nav-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+  backdrop-filter: opacity(20px);
+  background: rgba(18, 18, 19, 0.3);
+  backdrop-filter: blur(3px);
+  transition: box-shadow 0.3s ease;
+}
+
+.nav-link-custom .span-hover {
+  display: block;
+  height: 5px;
+  border-radius: 4px;
+  width: 0;
+  background: var(--hov-col);
+  transition: width 0.3s ease;
+} 
+.hov .span-white {
+  display: block;
+  height: 5px;
+  border-radius: 4px;   
+  width: 0;
+  background: var(--hov-col);
+  transition: width 0.3s ease;
+}
+.nav-link-custom:hover .span-hover{
+  width: 100%;
+}
+.hov:hover .span-white{
+  width: 100%;
+}
+.banner-container img{
+  width: 400px;
+  aspect-ratio: 9/9;
+}
+.banner-container{
+  display: flex;
+  justify-content: center;
+  margin: 4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.banner-content{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.ms-auto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40%;
+  gap: 1rem;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 0px 2rem 0px 2rem;
+  flex-wrap: wrap;
+
+}
+.footer-container{
+
+  transition: box-shadow 0.3s ease;
+  background-color: #1C1C1E;
+
+  /* background: rgba(175, 29, 29, 0.096); */
+  transition: box-shadow 0.3s ease;
+}
+.footer-container h5{
+  font-family: "Quicksand";
+  color: var(--text-color);
+}
+.footer-container .list-a a{
+  color: var(--p-color) !important;
+}
+ /* media qeuries */
+@media (width <= 767px) {
+  .banner-container{
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .banner-container img{
+    width: 300px;
+    aspect-ratio: 9/9;
+  }
+  h1{
+    text-align: center;
+  }
+  
+}
