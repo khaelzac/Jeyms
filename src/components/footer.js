@@ -28,10 +28,8 @@ const Footer = () => {
                 <a href="#link" className="text-decoration-none text-body">Instagram</a>
               </div>
             </Col>
-        </Row>
-        <Row>
         <div className="text-center border-top py-3 text-white">
-            <small>&copy; {new Date().getFullYear()} James. All rights reserved.</small>
+            <small>&copy; {new Date().getFullYear()} Boyet. All rights reserved.</small>
         </div>
         </Row>
       </Container>

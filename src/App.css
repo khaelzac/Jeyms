@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 :root{
   --bg-col: #355c7d;
   --second-col: #f8b195;
@@ -8,18 +9,27 @@
   --p-color: #E0E0E0;
 
 }
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  margin: 0;
-  font-family: "Quicksand";
+  font-family: "Quicksand", sans-serif !important;
 }
-body, html{
+
+
+html, body {
   background: linear-gradient(135deg, #0F2027, #2C5364);
   background-repeat: no-repeat;
   scroll-behavior: smooth;
+  height: calc(100%,1vh * 100);
 }
+
+#root {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 h1,h2,h3,h4,h5,h6{
   font-family: "Quicksand";
   color: var(--text-color);
@@ -31,6 +41,10 @@ h1,h2,h3,h4,h5,h6{
 .content{
   display: flex;
   justify-content: center;
+}
+.content h1 {
+  color: var(--text-color);
+  
 }
 .content-container{
   display: flex;
@@ -71,10 +85,10 @@ p{
   font-weight: bold;
 }
 .nav-shadow {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px -1px rgb(0, 0, 0);
   transition: box-shadow 0.3s ease;
   backdrop-filter: opacity(20px);
-  background: rgba(18, 18, 19, 0.3);
+  background: rgba(18, 18, 19, 0.575);
   backdrop-filter: blur(3px);
   transition: box-shadow 0.3s ease;
 }
@@ -152,7 +166,7 @@ p{
   color: var(--p-color) !important;
 }
  /* media qeuries */
-@media (width <= 767px) {
+@media (max-width: 600px) {
   .banner-container{
     flex-direction: column;
     gap: 1.5rem;
@@ -161,8 +175,5 @@ p{
     width: 300px;
     aspect-ratio: 9/9;
   }
-  h1{
-    text-align: center;
-  }
-  
+
 }

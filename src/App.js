@@ -1,19 +1,21 @@
 
 import './App.css';
-import Navbar from "./components/Navbar";
+import Nav from './components/navbar/Nav';
+// import './components/navbar/Nav.css';
+// import Navbar from "./components/Navbar";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from "./components/Banner";
-import API from "./components/testApi";
+// import Header from "./components/Banner";
+// import API from "./components/testApi";
 import FOOTER from "./components/footer";
-import Type from "./components/Type"
+import Home from './components/home/Home';
 
 function App() {
   return (
     <>
-    <Navbar/>
-    <Header/>
-    <API/>
-    <Type/>
+    
+    {/* <Navbar/> */}
+    <Nav/>
+    <Home/>
     <FOOTER/>
     </>
 

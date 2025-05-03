@@ -32,9 +32,9 @@ const BootstrapNavbar = () => {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`}href="#home">Home<span className={scrolled? 'span-white' : 'span-hover'}></span></Nav.Link>
-            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`}href="#skills">Skills<span className={scrolled? 'span-white' : 'span-hover'}></span></Nav.Link>
-            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`}href="#about">About Me<span className={scrolled? 'span-white' : 'span-hover'}></span></Nav.Link>
+            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`} href="#home">Home<span className={scrolled ? 'span-white' : 'span-hover'}></span></Nav.Link>
+            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`} href="#skills">Skills<span className={scrolled ? 'span-white' : 'span-hover'}></span></Nav.Link>
+            <Nav.Link className={`nav-link-custom ${scrolled ? 'nav-link-w' : ''} hov`} href="#about">About Me<span className={scrolled ? 'span-white' : 'span-hover'}></span></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
