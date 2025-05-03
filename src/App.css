@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
-:root{
+
+:root {
   --bg-col: #355c7d;
   --second-col: #f8b195;
-  --grad-color: -webkit-linear-gradient(var(--bg-col),var(--second-col));
+  --grad-color: -webkit-linear-gradient(var(--bg-col), var(--second-col));
   --hov-col: #FF6B6B;
   --text-color: #ffffff;
   --p-color: #E0E0E0;
 
 }
-* {
-  padding: 0;
+
+
+*,
+*:is(::before, ::after) {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  user-select: none;
+  stroke-width: 1;
   font-family: "Quicksand", sans-serif !important;
 }
 
 
-html, body {
+html,
+body {
   background: linear-gradient(135deg, #0F2027, #2C5364);
   background-repeat: no-repeat;
   scroll-behavior: smooth;
-  height: calc(100%,1vh * 100);
+  height: calc(100%, 1vh * 100);
 }
 
 #root {
@@ -30,23 +39,32 @@ html, body {
   height: 100%;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Quicksand";
   color: var(--text-color);
 }
-.type-writer{
+
+.type-writer {
   font-family: "Quicksand";
   color: var(--text-color);
 }
-.content{
+
+.content {
   display: flex;
   justify-content: center;
 }
+
 .content h1 {
   color: var(--text-color);
-  
+
 }
-.content-container{
+
+.content-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,18 +72,22 @@ h1,h2,h3,h4,h5,h6{
   width: 80vw;
   gap: 1.5rem;
 }
-.content-container h1{
+
+.content-container h1 {
   font-family: "Quicksand";
   color: var(--text-color);
   align-self: flex-start;
 }
-.banner-content h1{
+
+.banner-content h1 {
   color: var(--text-color);
 }
-p{
+
+p {
   color: var(--p-color);
   font-size: 1.5rem;
 }
+
 .navbar .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
@@ -79,13 +101,15 @@ p{
   font-size: 1.5rem !important;
   font-weight: bold;
 }
+
 .nav-link-w {
   color: white !important;
   font-size: 1.5rem !important;
   font-weight: bold;
 }
+
 .nav-shadow {
-  box-shadow: 0 4px 8px -1px rgb(0, 0, 0);
+  box-shadow: 0 4px 8px -1px rgb(17, 14, 27);
   transition: box-shadow 0.3s ease;
   backdrop-filter: opacity(20px);
   background: rgba(18, 18, 19, 0.575);
@@ -100,26 +124,31 @@ p{
   width: 0;
   background: var(--hov-col);
   transition: width 0.3s ease;
-} 
+}
+
 .hov .span-white {
   display: block;
   height: 5px;
-  border-radius: 4px;   
+  border-radius: 4px;
   width: 0;
   background: var(--hov-col);
   transition: width 0.3s ease;
 }
-.nav-link-custom:hover .span-hover{
+
+.nav-link-custom:hover .span-hover {
   width: 100%;
 }
-.hov:hover .span-white{
+
+.hov:hover .span-white {
   width: 100%;
 }
-.banner-container img{
+
+.banner-container img {
   width: 400px;
   aspect-ratio: 9/9;
 }
-.banner-container{
+
+.banner-container {
   display: flex;
   justify-content: center;
   margin: 4rem;
@@ -127,11 +156,12 @@ p{
   gap: 2rem;
 }
 
-.banner-content{
+.banner-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
+
 .ms-auto {
   display: flex;
   flex-direction: column;
@@ -141,7 +171,7 @@ p{
   gap: 1rem;
 }
 
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +180,8 @@ p{
   flex-wrap: wrap;
 
 }
-.footer-container{
+
+.footer-container {
 
   transition: box-shadow 0.3s ease;
   background-color: #1C1C1E;
@@ -158,20 +189,24 @@ p{
   /* background: rgba(175, 29, 29, 0.096); */
   transition: box-shadow 0.3s ease;
 }
-.footer-container h5{
+
+.footer-container h5 {
   font-family: "Quicksand";
   color: var(--text-color);
 }
-.footer-container .list-a a{
+
+.footer-container .list-a a {
   color: var(--p-color) !important;
 }
- /* media qeuries */
+
+/* media qeuries */
 @media (max-width: 600px) {
-  .banner-container{
+  .banner-container {
     flex-direction: column;
     gap: 1.5rem;
   }
-  .banner-container img{
+
+  .banner-container img {
     width: 300px;
     aspect-ratio: 9/9;
   }

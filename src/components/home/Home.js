@@ -24,7 +24,7 @@ const Home = () => {
                     <div className="home-content">
 
                         <div className="home-content-container">
-                            <div className="home-content-wraper item-1">
+                            <div className="home-content-wraper item-2">
                                 {isPending && <div className="spinner"></div>
                                 }
                                 {error && <h1>{error}</h1>}
