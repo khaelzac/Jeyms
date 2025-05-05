@@ -21,7 +21,8 @@
   box-sizing: border-box;
   user-select: none;
   stroke-width: 1;
-  font-family: "Quicksand", sans-serif !important;
+  font-family: "Raleway", sans-serif !important;
+  height: calc(100%, 1vh * 100);
 }
 
 

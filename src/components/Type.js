@@ -3,14 +3,16 @@ import Typewriter from "typewriter-effect";
 import useFetch from "./useFetch";
 
 function Type() {
-  const { data: input, isPending, error } = useFetch(
-    'https://api.sheetbest.com/sheets/0717022e-8757-4c3b-818e-ddef7828fe1d'
-  );
+  const sheetID = '1ZBW3dFEA90aL55yMWmNKBvyiVuZwNRwF9xQweGHlCxc';
+  const sheetRange = 'Sheet1';
+  const apiKey = 'AIzaSyCdph4ll6vDNaZJLAM8pVqzmQH5W_posy4';
+  const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${sheetRange}?key=${apiKey}`;
+  const { data: input, isPending, error } = useFetch(url);
 
   const typeData = input
     ? input
-        .filter(item => item.typeWriters != null && item.typeWriters.trim() !== "")
-        .map(item => item.typeWriters)
+      // .values.filter(item => item[0] != null && item[0].trim() !== "")
+      .values.map(item => item[0])
     : [];
   return (
     <h1 className="type-writer">

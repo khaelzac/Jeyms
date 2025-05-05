@@ -1,5 +1,7 @@
 import './Nav.css';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from "react";
+
 const Nav = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 767);
@@ -21,7 +23,6 @@ const Nav = () => {
     const handleResize = (e) => setIsMobile(e.matches);
     mediaQuery.addListener(handleResize);
     setIsMobile(mediaQuery.matches);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
       mediaQuery.removeListener(handleResize);
@@ -35,20 +36,20 @@ const Nav = () => {
           {isMobile && <div onClick={handleCollapse} className="burger"><span>☰</span></div>}
           {!isMobile &&
             <div className='nav-collapse'>
-              <a href='#home'>Home<span className='span-hover'></span></a>
-              <a href='#About'>About<span className='span-hover'></span></a>
-              <a href='#Services'>Services<span className='span-hover'></span></a>
-              <a href='#Contact'>Contact<span className='span-hover'></span></a>
+              <Link to="/">Home<span className='span-hover'></span></Link>
+              <Link to='/About'>About<span className='span-hover'></span></Link>
+              <Link to='Services'>Services<span className='span-hover'></span></Link>
+              <Link to='Contact'>Contact<span className='span-hover'></span></Link>
             </div>
           }
         </div>
         {isCollapse &&
           <div className='nav-collapse nav-col'>
             <div className='collapse-wrapper'>
-              <a href='#home'>Home<span className='span-hover'></span></a>
-              <a href='#About'>About<span className='span-hover'></span></a>
-              <a href='#Services'>Services<span className='span-hover'></span></a>
-              <a href='#Contact'>Contact<span className='span-hover'></span></a>
+              <Link to="/">Home<span className='span-hover'></span></Link>
+              <Link to='/About'>About<span className='span-hover'></span></Link>
+              <Link to='Services'>Services<span className='span-hover'></span></Link>
+              <Link to='Contact'>Contact<span className='span-hover'></span></Link>
             </div>
           </div>
         }
