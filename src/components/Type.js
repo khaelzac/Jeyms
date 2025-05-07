@@ -3,9 +3,9 @@ import Typewriter from "typewriter-effect";
 import useFetch from "./useFetch";
 
 function Type() {
-  const sheetID = '1ZBW3dFEA90aL55yMWmNKBvyiVuZwNRwF9xQweGHlCxc';
+  const sheetID = process.env.REACT_APP_SHEET_ID;
   const sheetRange = 'Sheet1';
-  const apiKey = 'AIzaSyCdph4ll6vDNaZJLAM8pVqzmQH5W_posy4';
+  const apiKey = process.env.REACT_APP_API_KEY;;
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetID}/values/${sheetRange}?key=${apiKey}`;
   const { data: input, isPending, error } = useFetch(url);
 

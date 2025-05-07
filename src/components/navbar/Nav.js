@@ -46,10 +46,10 @@ const Nav = () => {
         {isCollapse &&
           <div className='nav-collapse nav-col'>
             <div className='collapse-wrapper'>
-              <Link to="/">Home<span className='span-hover'></span></Link>
-              <Link to='/About'>About<span className='span-hover'></span></Link>
-              <Link to='Services'>Services<span className='span-hover'></span></Link>
-              <Link to='Contact'>Contact<span className='span-hover'></span></Link>
+              <Link to="/">Home</Link>
+              <Link to='/About'>About</Link>
+              <Link to='Services'>Services</Link>
+              <Link to='Contact'>Contact</Link>
             </div>
           </div>
         }
